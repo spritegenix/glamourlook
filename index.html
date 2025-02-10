@@ -11,7 +11,7 @@
     <meta name="description" content="BarberShop & Hair Salon HTML Template" />
     <meta name="author" content="DynamicLayers" />
 
-    <title>Barber Shop || BarberShop Hair Salon HTML Template</title>
+    <title>Barber Shop | BarberShop Hair Salon HTML Template</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
 
@@ -110,7 +110,7 @@
                 <li><a href="#service">Services</a></li>
                 <li><a href="#price">Menu</a></li>
 
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#appointment">Contact</a></li>
               </ul>
             </div>
             <div class="header-btn">
@@ -314,19 +314,20 @@
           </div>
         </div>
       </div>
+      <div id="appointment"></div>
     </section>
     <!--/. service_section -->
 
-    <section class="book_section padding" id="appointment">
+    <section class="book_section padding" >
       <div class="book_bg"></div>
       <div class="map_pattern"></div>
       <div class="container">
         <div class="row">
           <div class="col-md-6 offset-md-6">
             <form
-              action="appointment.php"
+              action="mail.php"
               method="post"
-              id="appointment_form"
+              id="contact-form"
               class="form-horizontal appointment_form"
             >
               <div class="book_content">
@@ -341,7 +342,7 @@
                   <input
                     type="text"
                     id="app_name"
-                    name="app_name"
+                    name="name"
                     class="form-control"
                     placeholder="Name"
                     required
@@ -351,7 +352,7 @@
                   <input
                     type="email"
                     id="app_email"
-                    name="app_email"
+                    name="email"
                     class="form-control"
                     placeholder="Your Email"
                     required
@@ -363,7 +364,7 @@
                   <input
                     type="text"
                     id="app_phone"
-                    name="app_phone"
+                    name="mblno"
                     class="form-control"
                     placeholder="Your Phone No"
                     required
@@ -373,9 +374,9 @@
                   <input
                     type="text"
                     id="app_free_time"
-                    name="app_free_time"
+                    name="message"
                     class="form-control"
-                    placeholder="Your Free Time"
+                    placeholder="Your Free Date and Time"
                     required
                   />
                 </div>
@@ -401,10 +402,10 @@
                                     </select>
                                 </div>
                             </div> -->
-              <button id="app_submit" class="default_btn" type="submit">
+              <button id="contact-button" class="default_btn" type="submit">
                 Make Appointment
               </button>
-              <div id="msg-status" class="alert" role="alert"></div>
+              <div id="msg-status" class="alert ajax-response" role="alert"></div>
             </form>
           </div>
         </div>
@@ -911,7 +912,8 @@
     <!-- Contact JS -->
     <script src="js/contact.js"></script>
     <!-- Appointment JS -->
-    <script src="js/appointment.js"></script>
+    <!-- <script src="js/appointment.js"></script> -->
+    <script src="js/ajax-form.js"></script>
     <!-- Main JS -->
     <script src="js/main.js"></script>
   </body>
